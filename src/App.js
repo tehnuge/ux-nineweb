@@ -22,7 +22,7 @@ const App = () => {
     { name: "Pricing", body: Text.CLOUD_SERVER_D, bodyTitle: Text.CLOUD_SERVER_T },
     { name: "Get Paid to Test", body: Text.CLOUD_MAIL_D, bodyTitle: Text.CLOUD_MAIL_T },
     { name: "Blog", body: Text.DOMAIN_D, bodyTitle: Text.DOMAIN_T },
-    { name: 'Contact Us', body: '+66 0 2722 9080 +66 8 5807 2443', bodyTitle: 'Phone' }
+    { name: 'Contact', body: '+66 0 2722 9080 +66 8 5807 2443', bodyTitle: 'Phone' }
   ]
 
   const cards = [

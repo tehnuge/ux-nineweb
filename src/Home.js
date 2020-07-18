@@ -1,11 +1,21 @@
 import React from 'react';
 import Card from './Card';
+import Button from 'react-bootstrap/Button';
+
 
 const Home = props => {
   return (
     <div className="container">
       <div className="hero d-flex align-items-center justify-content-between">
-        <h1>User Testing made easy.</h1>
+        <div>
+          <h1>Wondering if your new <div className="special">product </div>
+        will succeed?</h1>
+        <br/>
+          <Button variant="primary">Learn More</Button>
+        </div>
+
+
+
         <img data-aos="fade-left" src={props.imgBg} alt="server" className="img-fluid main-image" />
       </div>
       <br />
