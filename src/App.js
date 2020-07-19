@@ -18,27 +18,24 @@ AOS.init();
 //const imgBg = "https://news.sophos.com/wp-content/uploads/2019/07/shutterstock_571378933-compressor.jpg"
 const App = () => {
   const titles = [
-    { name: "Features", body: Text.CLOUD_WEB_HOSTING_D, bodyTitle: Text.CLOUD_WEB_HOSTING_T },
-    { name: "Pricing", body: Text.CLOUD_SERVER_D, bodyTitle: Text.CLOUD_SERVER_T },
-    { name: "Get Paid to Test", body: Text.CLOUD_MAIL_D, bodyTitle: Text.CLOUD_MAIL_T },
-    { name: "Blog", body: Text.DOMAIN_D, bodyTitle: Text.DOMAIN_T },
+    { name: "Features", body: "Get the right users on your application to catch issues before they go to production", bodyTitle: "Get qualified testers" },
     { name: 'Contact', body: '+66 0 2722 9080 +66 8 5807 2443', bodyTitle: 'Phone' }
   ]
 
   const cards = [
-    { icon: "fas fa-bullseye", name: "Target your audience", li: ["Get the right users using your site; we'll find the ones you're looking for"], href: "cloudwebhosting" },
-    { icon: "fas fa-search", name: "Discover", li: ["Browse metrics and insights on user experiences"], href: "cloudserver" },
-    { icon: "fas fa-share-alt-square", name: "Share", li: ["Build a shared understanding of your experience and share it across your favorite tools"], href: "cloudmail" }
+    { icon: "fas fa-bullseye", name: "Target your audience", li: ["Get the right users using your site; we'll find the ones you're looking for"], href: "contact" },
+    { icon: "fas fa-search", name: "Discover", li: ["Browse metrics and insights on user experiences"], href: "contact" },
+    { icon: "fas fa-share-alt-square", name: "Share", li: ["Build a shared understanding of your experience and share it across your favorite tools"], href: "contact" }
   ]
 
   return (
     <Router>
-      <div className="">
+      <div className="container">
         <header className="navbar d-flex align-items-baseline">
-          <div>
+          <a href="/">
             <img src="nineweb_mod.png" className="App-logo" alt="logo" />
-          </div>
           <h1>{Text.NINE_WEB}</h1>
+          </a>
           {/* mobile */}
           <div className="tabs-m dropdown">
             <i className="fas fa-bars"></i>
@@ -59,7 +56,7 @@ const App = () => {
             </div>
           </ul>
           <span className="free">
-            <Button variant="primary">Try Nineweb for free</Button>
+            <Button variant="primary" href="/Contact">Try Nineweb for free</Button>
           </span>
         </header>
         <Switch>
@@ -71,9 +68,6 @@ const App = () => {
           </Route>
         </Switch>
         <footer>
-          <div id="footer" className='d-flex justify-content-center'>
-            <h3>Contact Us</h3>
-          </div>
         </footer>
       </div>
     </Router>

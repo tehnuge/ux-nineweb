@@ -11,7 +11,7 @@ const Home = props => {
           <h1>Wondering if your new <div className="special">product </div>
         will succeed?</h1>
         <br/>
-          <Button variant="primary">Learn More</Button>
+          <Button variant="primary" href="/Contact">Learn More</Button>
         </div>
 
 
