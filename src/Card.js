@@ -8,7 +8,7 @@ const Card = props => {
       <h2 className="card-title">{props.card.name}</h2>
       <div className="card-text">
           {props.card.li.map(val => {
-            return <div>{val}</div>
+            return <div key={val}>{val}</div>
           })}
       </div>
       <a href={props.card.href} className="btn btn-primary">Learn more</a>

@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Card from './Card';
 import Button from 'react-bootstrap/Button';
-import styled from 'styled-components'
-import AOS from 'aos';
+import styled, {keyframes} from 'styled-components'
 
 const imgBg = "bg.jpg"
 
@@ -24,36 +23,53 @@ const PaddingDiv = styled.div`
 padding:120px;
 color:white;`
 
+const FIO = keyframes`
+0% {
+  opacity: 0;
+}
+100% {
+  opacity: 1;
+}`
+
+const FI = keyframes`
+0% {
+  opacity: 0;
+}
+100% {
+  opacity: .9;
+}`
+
+const Fade = styled.div`
+  animation: ${props => props.out ? FIO : FI} 1s linear;
+  transition: visibility 1s linear;
+`;
+
 const Home = props => {
 
-  const bannerList = ['Product', 'Website', 'Tool']
+  const bannerList = ['Product', 'Website', 'Tool', 'Interface']
   const [bannerWords, setBannerWords] = useState('Tool')
   const [i, setI] = useState(0)
 
   useEffect(() => {
-    AOS.refreshHard();
-
     const interval = setInterval(() => {
-      AOS.refreshHard();
-      if (i === 3){
+      if (i  === 4 ){
         setI(0)
         setBannerWords(bannerList[0])
       }else{
         setI(i+1)
         setBannerWords(bannerList[i])
       }
-    }, 3000);
+    }, 2000);
     return () => clearInterval(interval);
-  }, [i]);
-
+  }, [i, bannerList]);
 
   return (
     <div className="container-fluid">
       <div className="row hero d-flex align-items-center justify-content-between">
         <ImgDiv>
         <PaddingDiv>
-          <h1>Wondering if your new <div className="special" data-aos="fade-left"     data-aos-offset="200"
->{bannerWords} </div>
+          <h1>Wondering if your new 
+            <Fade out={i % 2 === 0}> {bannerWords} </Fade>
         will succeed?</h1>
         <br/>
           <Button variant="primary" href="/Contact">Learn More</Button>
@@ -64,7 +80,7 @@ const Home = props => {
       <h2 className="d-flex justify-content-center">How it Works</h2>
       <div className="cards d-flex justify-content-between ">
         {props.cards.map(card =>
-          <Card card={card} />
+          <Card card={card} key={card.name} />
         )}
       </div>
     </div>

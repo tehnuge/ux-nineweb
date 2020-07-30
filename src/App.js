@@ -1,8 +1,5 @@
 import React from 'react';
 import './App.css';
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-import * as Text from './text';
 import HeaderComp from './HeaderComp';
 import Home from './Home';
 import Contact from './Contact';

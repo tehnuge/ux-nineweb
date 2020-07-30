@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 
 
@@ -28,7 +28,7 @@ const Contact = props => {
 
     }).then(res => res.json())
       .catch(err =>
-        setError(err));
+        setError(err)).then(() => console.log(error));
 
     return response; // parses JSON response into native JavaScript objects
   }
