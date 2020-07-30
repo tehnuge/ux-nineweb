@@ -10,7 +10,6 @@ import {
   Route,
 } from "react-router-dom";
 
-AOS.init();
 //const imgBg = "https://news.sophos.com/wp-content/uploads/2019/07/shutterstock_571378933-compressor.jpg"
 const App = () => {
   const titles = [
