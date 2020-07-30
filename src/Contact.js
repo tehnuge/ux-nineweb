@@ -65,7 +65,8 @@ const Contact = props => {
 
   return (
     <div className="d-flex justify-content-center">
-      {submitted ? <h2>Thank you.</h2> :
+      {submitted ? 
+      <h2>Thank you.</h2> :
         <form>
           <h2>
             Learn More

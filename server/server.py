@@ -20,6 +20,6 @@ def catch_all(u_path):
 
 
 def write(row):
-  with open('contacts.csv', mode='w') as contact_file:
+  with open('contacts.csv', mode='a') as contact_file:
     contact_writer = csv.writer(contact_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
     contact_writer.writerow(row)
