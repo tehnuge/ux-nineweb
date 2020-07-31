@@ -54,7 +54,6 @@ const Home = props => {
     const interval = setInterval(() => {
       if (i  === 4 ){
         setI(0)
-        setBannerWords(bannerList[0])
       }else{
         setI(i+1)
         setBannerWords(bannerList[i])
