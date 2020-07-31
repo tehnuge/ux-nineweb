@@ -32,7 +32,7 @@ const App = () => {
       <div className="container">
         <header className="navbar d-flex align-items-baseline">
           <a href="/">
-            <img src="nineweb_mod.png" className="App-logo" alt="logo" />
+            <img src="NineUX_Logo.png" className="App-logo" alt="logo" />
           </a>
           {/* mobile */}
           <div className="tabs-m dropdown">
@@ -53,7 +53,7 @@ const App = () => {
             </div>
           </ul>
           <span className="free">
-            <Button variant="primary" href="/Contact">Contact Us</Button>
+            <Button className="btn-nav" href="/Contact">Contact Us</Button>
           </span>
         </header>
         </div>

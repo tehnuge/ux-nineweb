@@ -4,7 +4,12 @@ form {
 
 a,
 a:hover {
-  color: #333132;
+  color: #3F6AA0;
+}
+.btn-nav {
+  background-color: #3F6AA0;
+  color: white;
+  border-radius: 14px;
 }
 .dropdown-content {
   opacity: 0;
