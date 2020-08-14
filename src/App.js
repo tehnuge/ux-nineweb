@@ -29,44 +29,44 @@ const App = () => {
 
   return (
     <Router>
-      <div className="container">
-        <header className="navbar d-flex align-items-baseline">
-          <a href="/">
-            <img src="NineUX_Logo.png" className="App-logo" alt="logo" />
-          </a>
-          {/* mobile */}
-          <div className="tabs-m dropdown">
-            <i className="fas fa-bars"></i>
-            <div className="dropdown-content">
-              <ul className="list-group">
-                {titles.map(title =>
-                  <li key = {title.name} className="list-group-item">{title.name}</li>
-                )}
+      <div className="navbar fixed-top">
+          <div className="d-flex align-items-baseline">
+              <a href="/">
+                <img src="NineUX_Logo.png" className="App-logo" alt="logo" />
+              </a>
+              {/* mobile */}
+              <div className="tabs-m dropdown">
+                <i className="fas fa-bars"></i>
+                <div className="dropdown-content">
+                  <ul className="list-group">
+                    {titles.map(title =>
+                      <li key={title.name} className="list-group-item">{title.name}</li>
+                    )}
+                  </ul>
+                </div>
+              </div>
+              <ul className="tabs navbar-nav-scroll flex-grow-1">
+                <div className="titles d-flex justify-content-between">
+                  {titles.map(title => {
+                    return <HeaderComp key={title.name} name={title.name} body={title.body} bodyTitle={title.bodyTitle} />
+                  })}
+                </div>
               </ul>
-            </div>
+              <span className="free">
+                <Button className="btn-nav" href="/Contact">Contact Us</Button>
+              </span>
           </div>
-          <ul className="tabs navbar-nav-scroll flex-grow-1">
-            <div className="titles d-flex justify-content-between">
-              {titles.map(title => {
-                return <HeaderComp key={title.name} name={title.name} body={title.body} bodyTitle={title.bodyTitle} />
-              })}
-            </div>
-          </ul>
-          <span className="free">
-            <Button className="btn-nav" href="/Contact">Contact Us</Button>
-          </span>
-        </header>
-        </div>
-        <Switch>
-          <Route exact path='/'>
-            <Home cards={cards} />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-        </Switch>
-        <footer>
-        </footer>
+          </div>
+      <Switch>
+        <Route exact path='/'>
+          <Home cards={cards} />
+        </Route>
+        <Route path="/contact">
+          <Contact />
+        </Route>
+      </Switch>
+      <footer>
+      </footer>
     </Router>
   );
 }
